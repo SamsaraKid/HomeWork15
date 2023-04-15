@@ -45,7 +45,7 @@ function checkEmpty() {
 //отекстовка результата
 function printArray() {
     if (x.length) {
-        $('#result').text('Ваш массив: [' + x + ']')
+        $('#result').text('Ваш массив: [' + x.join(', ') + ']')
     } else {$('#result').text('Ваш массив пуст. Добавьте значения')}
 }
 
@@ -65,8 +65,14 @@ $('#delFirst').click(function (){
     checkEmpty()
 })
 
-
 $('#add1').click(fAdd)
+
+$(document).on('keypress','#in',function (e) {
+    if (e.keyCode === 13) {
+        fAdd()
+    }
+})
+
 $('#delRepeat').click(function () {deleteRepeat(x)})
 $(document).ready($('#in').val(''))
 $('#in').keyup(checkInput)

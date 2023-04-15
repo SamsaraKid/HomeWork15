@@ -1,3 +1,7 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
 body{
   box-sizing: border-box;
 }
@@ -23,9 +27,6 @@ body{
 
 input, button{
   text-decoration: none;
-  display: block;
-  margin: 2% auto;
-  width: 75%;
   line-height: 45px;
   border-radius: 45px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
@@ -35,12 +36,43 @@ input, button{
   letter-spacing: 3px;
   font-weight: 600;
   color: #524f4e;
-  min-width: max-content;
+  }
+
+input{
+  width: 100%;
 }
 
 button{
   background: white;
   transition: .3s;
+  display: block;
+  margin: 2% auto;
+  width: 75%;
+}
+
+#in:focus{
+  border-color: #949494;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(82, 82, 82, 0.25);
+}
+
+#in_wrap{
+  position: relative;
+  margin: 2% auto;
+  width: 75%;
+}
+
+#in_wrap::after {
+  content: '';
+  background-image: url("../img/enter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: opacity(25%);
+  aspect-ratio: 1/1;
+  height: 50%;
+  position: absolute;
+  right: 3%;
+  top: 25%
 }
 
 button:hover:not([disabled]) {
@@ -48,7 +80,6 @@ button:hover:not([disabled]) {
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
   transform: translateY(-7px);
-
 }
 
 button:disabled {
@@ -70,7 +101,7 @@ input:invalid {
 }
 
 h2{
-  min-height: 42px;
+  /*max-width: 900px;*/
   line-height: 45px;
   font-size: 15px;
   text-transform: uppercase;
