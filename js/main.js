@@ -68,7 +68,6 @@ $('#delFirst').click(function (){
 
 $('#add1').click(fAdd)
 $('#delRepeat').click(function () {deleteRepeat(x)})
-$(document).ready(checkInput)
 $(document).ready($('#in').val(''))
 $('#in').keyup(checkInput)
 $('#in').change(checkInput)
