@@ -30,7 +30,7 @@ function deleteRepeat(massive) {
 
 //проверка ввода числа в поле
 function checkInput() {
-    if (($('#in').val() != '') && document.getElementById("in").checkValidity()) {
+    if ($('#in').val() && document.getElementById("in").checkValidity()) {
         $('#add1').prop('disabled', false)
     } else {$('#add1').prop('disabled', true)}
 }
