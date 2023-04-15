@@ -10,12 +10,12 @@
 <body>
 
     <div id="wrap">
-        <input id="in" type="number" autofocus="autofocus" placeholder="Введите число" step="any">
-        <button id="add1">Добавить</button>
-        <button id="delLast">Удалить последнее</button>
-        <button id="delFirst">Удалить первое</button>
-        <button id="delRepeat">Удалить повторы</button>
-        <h2 id="result"></h2>
+        <input id="in" type="number" placeholder="Введите число" step="any">
+        <button id="add1" disabled>Добавить</button>
+        <button class="deletes" id="delLast" disabled>Удалить последнее</button>
+        <button class="deletes" id="delFirst" disabled>Удалить первое</button>
+        <button class="deletes" id="delRepeat" disabled>Удалить повторы</button>
+        <h2 id="result">Ваш массив пуст. Добавьте значения</h2>
     </div>
 
 
